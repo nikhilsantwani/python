@@ -63,3 +63,22 @@ def main():
 # Run the program
 if __name__ == "__main__":
     main()
+
+Q :- Write a recursive function to calculate the factorial of a given number n. The factorial of n (denoted as n!) is the product of all positive integers less than or equal to n. For instance, 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+Solution
+In Python, you can solve this using recursion as follows:
+
+python
+Copy code
+def factorial(n):
+    # Base case: if n is 0 or 1, return 1 (as 0! and 1! = 1)
+    if n == 0 or n == 1:
+        return 1
+    # Recursive case: multiply n by the factorial of n-1
+    else:
+        return n * factorial(n - 1)
+
+# Test the function
+num = 5
+print(f"The factorial of {num} is {factorial(num)}")
